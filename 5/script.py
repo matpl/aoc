@@ -12,5 +12,5 @@ for line in lines:
 seats.sort()
 for i in range(0, len(seats) - 1):
     if seats[i] + 1 != seats[i + 1]:
-        print(seats[i] + 1) # 676
+        print(seats[i] + 1)
         break
