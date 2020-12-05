@@ -7,7 +7,7 @@ for line in lines:
     for i in range(0,10):
         if line[i] == 'F' or line[i] == 'L':
             pos &= ~(512 >> i)
-    seats.append((pos >> 3 << 3) + (pos & 7))
+    seats.append(pos)
 
 seats.sort()
 for i in range(0, len(seats) - 1):
