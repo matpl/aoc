@@ -3,9 +3,9 @@ groups = list(map(lambda line : line, file.read().split('\n\n')))
 count = 0
 for group in groups:
     people = group.split('\n')
-    questions = (2 << 25) - 1
+    questions = (1 << 26) - 1
     for p in people:
-        p = list(map(lambda c: pow(2,ord(c) - 97), p))
+        p = list(map(lambda c: 1 << (ord(c) - 97), p))
         bin = 0
         for c in p:
             bin |= c
