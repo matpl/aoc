@@ -6,8 +6,6 @@ import (
 	"strings"
 )
 
-const part = 2
-
 func main() {
 
 	data, _ := os.ReadFile("input.txt")
