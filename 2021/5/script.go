@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+const part = 2
+
 func main() {
 
 	data, _ := os.ReadFile("input.txt")
@@ -24,6 +26,10 @@ func main() {
 		y1, _ := strconv.Atoi(p1[1])
 		x2, _ := strconv.Atoi(p2[0])
 		y2, _ := strconv.Atoi(p2[1])
+
+		if part == 1 && !(x1 == x2 || y1 == y2) {
+			continue
+		}
 
 		xSign := 1
 		ySign := 1
