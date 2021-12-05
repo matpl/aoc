@@ -13,6 +13,7 @@ func main() {
 	data, _ := os.ReadFile("input.txt")
 	lines := strings.Split(string(data), "\n")
 
+	total := 0
 	m := make(map[string]int)
 
 	for index, line := range lines {
@@ -50,16 +51,12 @@ func main() {
 			key := strconv.Itoa(x1+i*xSign) + "," + strconv.Itoa(y1+i*ySign)
 			if _, ok := m[key]; ok {
 				m[key] = m[key] + 1
+				if m[key] == 2 {
+					total++
+				}
 			} else {
 				m[key] = 1
 			}
-		}
-	}
-
-	total := 0
-	for _, v := range m {
-		if v >= 2 {
-			total++
 		}
 	}
 	println(total)
