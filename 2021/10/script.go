@@ -9,11 +9,9 @@ import (
 
 const part = 2
 
-var lines []string
-
 func main() {
 	data, _ := os.ReadFile("input.txt")
-	lines = strings.Split(string(data), "\n")
+	lines := strings.Split(string(data), "\n")
 
 	score := 0
 	scores := []int{}
